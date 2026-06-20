@@ -10,7 +10,7 @@
 ## 📌 Project Banner
 
 <p align="center">
-  <img width="1200" alt="Siltawi Banner" src="./assets/banner.png" />
+  <img width="1200" alt="Siltawi Banner" src="assets/.aistudio/Screenshot 2026-06-20 211347.png" />
 </p>
 
 > 
