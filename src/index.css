@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-orange: #F9A03F;
+  --color-brand-red: #E43E54;
+  --color-brand-magenta: #D8275D;
+  --color-brand-plum: #631B5D;
+  --color-brand-dark: #0F0913;
+  --color-brand-obsidian: #09050B;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-obsidian);
+    color: #f1f5f9;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbar to match sleek theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0913;
+}
+::-webkit-scrollbar-thumb {
+  background: #391c3d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-magenta);
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Text glow effects */
+.text-glow {
+  text-shadow: 0 0 20px rgba(216, 39, 93, 0.4);
+}
+
+.text-glow-orange {
+  text-shadow: 0 0 20px rgba(249, 160, 63, 0.4);
+}
+
+/* Glassmorphism containers */
+.glass-panel {
+  background: rgba(18, 10, 24, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(28, 15, 36, 0.8);
+  border: 1px solid rgba(216, 39, 93, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(216, 39, 93, 0.1);
+}
+
+/* Gradient background radial glows */
+.glow-backdrop-plum {
+  background: radial-gradient(circle 800px at var(--x, 50%) var(--y, 50%), rgba(99, 27, 93, 0.15) 0%, transparent 80%);
+}
+
+.animate-floating {
+  animation: floating 8s ease-in-out infinite;
+}
+
+.animate-floating-delayed {
+  animation: floating 8s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+
